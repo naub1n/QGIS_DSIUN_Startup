@@ -507,7 +507,7 @@ class StartupDSIUN:
     def add_db_connections(self):
         self.log("Vérification de la présence des connections aux BDD.", Qgis.Info)
         database_connections = self.global_config.get("db_connections", [])
-        for cnx in self.database_connections:
+        for cnx in database_connections:
             cnx_provider = cnx.get("qgis_provider", "")
             cnx_name = cnx.get("name", "")
             cnx_host = cnx.get("host", "")
