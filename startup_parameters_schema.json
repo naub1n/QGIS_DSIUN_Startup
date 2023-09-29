@@ -1,0 +1,597 @@
+{
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "title": "JSON Schema",
+      "description": "Référence vers le schéma JSON pour le fichier de configuration startup_parameters.json",
+      "type": "string",
+      "format": "uri",
+      "default": "https://sources-rec.lesagencesdeleau.eu/dsiun/dun/dode/sig/qgis-startup/-/raw/main/startup_parameters_schema.json"
+    },
+    "default_crs": {
+      "title": "Projection par défaut",
+      "description": "Projection par défaut utilisée dans QGIS Desktop",
+      "type": "string"
+    },
+    "profiles" : {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "plugins": {
+      "type": "object",
+      "properties": {
+        "repositories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "authcfg": {
+                "type": "string"
+              },
+              "env": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["all", "dev", "rec", "prd"]
+                }
+              }
+            }
+          }
+        },
+        "plugins_names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "names": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "domains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "env": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["all", "dev", "rec", "prd"]
+                }
+              }
+            }
+          }
+        },
+        "configs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "plugin_name": {
+                "type": "string"
+              },
+              "config": {
+                "type": "object"
+              },
+              "domains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "env": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["all", "dev", "rec", "prd"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "authentications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "pass": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        },
+        "required": ["id", "name", "domains"]
+      }
+    },
+    "qgis": {
+      "type": "object",
+      "properties": {
+        "dsiun_version": {
+          "type": "integer"
+        },
+        "global_settings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "settings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string"
+                    },
+                    "value": {}
+                  }
+                }
+              },
+              "domains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "env": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["all", "dev", "rec", "prd"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "db_connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "qgis_provider": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "host": {
+            "type": "string"
+          },
+          "port": {
+            "type": "string"
+          },
+          "dbname": {
+            "type": "string"
+          },
+          "auth_id": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        }
+      }
+    },
+    "favorites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        }
+      }
+    },
+    "wfs_connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "ignoreAxisOrientation": {
+            "type": "boolean"
+          },
+          "invertAxisOrientation": {
+            "type": "boolean"
+          },
+          "maxnumfeatures": {
+            "type": "integer"
+          },
+          "pagesize": {
+            "type": "integer"
+          },
+          "pagingenabled": {
+            "type": "boolean"
+          },
+          "preferCoordinatesForWfsT11": {
+            "type": "boolean"
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "authcfg": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "wms_connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dpiMode": {
+            "type": "integer"
+          },
+          "ignoreAxisOrientation": {
+            "type": "boolean"
+          },
+          "ignoreGetFeatureInfoURI": {
+            "type": "boolean"
+          },
+          "ignoreGetMapURI": {
+            "type": "boolean"
+          },
+          "invertAxisOrientation": {
+            "type": "boolean"
+          },
+          "reportedLayerExtents": {
+            "type": "boolean"
+          },
+          "smoothPixmapTransform": {
+            "type": "boolean"
+          },
+          "url": {
+            "type": "string"
+          },
+          "authcfg": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "arcgis_connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "array"
+          },
+          "community_endpoint": {
+            "type": "string"
+          },
+          "content_endpoint": {
+            "type": "string"
+          },
+          "authcfg": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "composer_templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        }
+      }
+    },
+    "svg_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        }
+      }
+    },
+    "custom_env_vars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        }
+      }
+    },
+    "color_schemes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "colors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "value": {
+            "type": "string"
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "env": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "dev", "rec", "prd"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
