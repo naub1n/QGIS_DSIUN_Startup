@@ -15,7 +15,7 @@ log_msg = []
 appdata_path = os.getenv('APPDATA')
 qgisdata_path = os.path.join(appdata_path, 'QGIS/QGIS3')
 
-script_url = "https://sources-rec.lesagencesdeleau.eu/dsiun/dun/dode/sig/qgis-startup/-/raw/main/startup.py"
+script_url = "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup.py"
 script_dest = os.path.join(qgisdata_path, 'startup.py')
 log_dest = os.path.join(qgisdata_path, 'pyqgis_startup.log')
 

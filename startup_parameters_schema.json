@@ -6,7 +6,7 @@
       "description": "Référence vers le schéma JSON pour le fichier de configuration startup_parameters.json",
       "type": "string",
       "format": "uri",
-      "default": "https://sources-rec.lesagencesdeleau.eu/dsiun/dun/dode/sig/qgis-startup/-/raw/main/startup_parameters_schema.json"
+      "default": "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters_schema.json"
     },
     "default_crs": {
       "title": "Projection par défaut",

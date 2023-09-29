@@ -1,5 +1,5 @@
 {
-    "$schema": "https://sources-rec.lesagencesdeleau.eu/dsiun/dun/dode/sig/qgis-startup/-/raw/main/startup_parameters_schema.json",
+    "$schema": "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters_schema.json",
     "default_crs": "EPSG:2154",
     "profiles": ["DSIUN_dev", "DSIUN_rec", "DSIUN"],
     "network_drives": [

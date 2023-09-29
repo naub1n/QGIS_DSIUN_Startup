@@ -21,7 +21,7 @@ class StartupDSIUN:
     def __init__(self):
 
         #### Variables à paramétrer ####
-        self.conf_url = "https://sources-rec.lesagencesdeleau.eu/dsiun/dun/dode/sig/qgis-startup/-/raw/main/startup_parameters.json"
+        self.conf_url = "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters.json"
         self.default_profile_message = "Vous utilisez le profil par défaut. Privilégiez le profil DSIUN."
         self.qgis_bad_version_message = "Vous utilisez une version (%s) non gérée par la DSIUN (%s). Le paramètrage ne sera pas appliqué."
 
@@ -770,7 +770,7 @@ class StartupDSIUN:
             return True
 
         schema_conf_url = self.global_config.get('$schema',
-                                                 'https://raw.githubusercontent.com/naub1n/lade_dsiun_sig/developpement/qgis/startup_parameters_schema.json')
+                                                 'https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters_schema.json')
 
         try:
             r = requests.get(schema_conf_url,
