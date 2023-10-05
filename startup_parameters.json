@@ -255,7 +255,7 @@
         }
     ],
     "qgis": {
-        "dsiun_version" : 32804,
+        "dsiun_version" : 32811,
         "global_settings": [
             {
                 "settings": [
@@ -392,7 +392,7 @@
         },
         {
         "name": "IGN - Géoplateforme",
-        "url" : "https://wfs.geopf.fr/geoserver/ows?",
+        "url" : "https://data.geopf.fr/wfs/ows?",
         "version" : "2.0.0",
         "domains": ["all"],
         "env": ["all"]
@@ -452,21 +452,21 @@
         },
         {
         "name": "IGN - Géoplateforme - WMTS",
-        "url": "https://wmts.geopf.fr/rok4/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities",
+        "url": "https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities",
         "domains": ["all"],
         "users": ["aubin_ni"],
         "env": ["all"]
         },
         {
         "name": "IGN - Géoplateforme - WMS Raster",
-        "url": "https://wms-r.geopf.fr/rok4/wms?SERVICE=WMS&VERSION=1.3.0",
+        "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
         "domains": ["all"],
         "users": [""],
         "env": ["all"]
         },
         {
         "name": "IGN - Géoplateforme - WMS Vecteur",
-        "url": "https://wms-v.geopf.fr/geoserver/ows?SERVICE=WMS&VERSION=1.3.0",
+        "url": "https://data.geopf.fr/wms-v/ows?service=wms&version=1.3.0&request=GetCapabilities",
         "domains": ["all"],
         "users": [""],
         "env": ["all"]
