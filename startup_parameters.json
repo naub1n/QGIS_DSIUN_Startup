@@ -33,7 +33,7 @@
             ],
             "domains": ["all"],
             "users": [""],
-            "envs": ["all"]
+            "envs": ["dev"]
         },
         {
             "names": [

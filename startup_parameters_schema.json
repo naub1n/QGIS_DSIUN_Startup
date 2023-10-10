@@ -36,7 +36,7 @@
               "authcfg": {
                 "type": "string"
               },
-              "env": {
+              "envs": {
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -69,7 +69,7 @@
                   "type": "string"
                 }
               },
-              "env": {
+              "envs": {
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -102,7 +102,7 @@
                   "type": "string"
                 }
               },
-              "env": {
+              "envs": {
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -143,7 +143,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -189,7 +189,7 @@
                   "type": "string"
                 }
               },
-              "env": {
+              "envs": {
                 "type": "array",
                 "items": {
                   "type": "string",
@@ -236,7 +236,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -269,7 +269,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -332,7 +332,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -396,7 +396,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -442,7 +442,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -473,7 +473,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -503,7 +503,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -536,7 +536,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
@@ -583,7 +583,7 @@
               "type": "string"
             }
           },
-          "env": {
+          "envs": {
             "type": "array",
             "items": {
               "type": "string",
