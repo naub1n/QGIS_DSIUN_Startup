@@ -213,7 +213,7 @@
     "authentications": [
         {
         "id": "dsiun01",
-        "name": "Authentification Agences de l'eau - Dev",
+        "name": "Authentification Agences de l'eau",
         "domains": ["all"],
         "users": ["aubin_ni"],
         "envs": ["all"]
