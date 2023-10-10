@@ -99,7 +99,7 @@
             },
             "domains": [""],
             "users": ["aubin_ni"],
-            "envs": ["all"]
+            "envs": ["dev"]
         },
         {
             "plugin_name": "menu_from_project",
