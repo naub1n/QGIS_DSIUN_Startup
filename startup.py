@@ -144,23 +144,25 @@ class StartupDSIUN:
             repo_name = repo.get("name", "")
             repo_url = repo.get("url", "")
             repo_authcfg = repo.get("authcfg", "")
+            repo_envs = [x.lower() for x in repo.get("envs", [])]
 
-            if repo_name and repo_url:
-                try:
-                    settings = QgsSettings()
-                    settings.beginGroup(reposGroup)
-                    if repo_name in repositories.all():
-                        settings.remove(repo_name)
-                    # add to settings
-                    settings.setValue(repo_name + "/url", repo_url)
-                    settings.setValue(repo_name + "/authcfg", repo_authcfg)
-                    settings.setValue(repo_name + "/enabled", True)
-                    # refresh lists and populate widgets
-                    plugins.removeRepository(repo_name)
-                    self.pyplugin_inst.reloadAndExportData()
-                    self.log("Ajout/Remplacement du dépôt %s - OK" % repo_name, Qgis.Info)
-                except Exception as e:
-                    self.log("Erreur lors de la l'ajout/le remplacement du dépôt %s : %s" % (repo_name, str(e)), Qgis.Critical)
+            if self.check_envs(repo_envs):
+                if repo_name and repo_url:
+                    try:
+                        settings = QgsSettings()
+                        settings.beginGroup(reposGroup)
+                        if repo_name in repositories.all():
+                            settings.remove(repo_name)
+                        # add to settings
+                        settings.setValue(repo_name + "/url", repo_url)
+                        settings.setValue(repo_name + "/authcfg", repo_authcfg)
+                        settings.setValue(repo_name + "/enabled", True)
+                        # refresh lists and populate widgets
+                        plugins.removeRepository(repo_name)
+                        self.pyplugin_inst.reloadAndExportData()
+                        self.log("Ajout/Remplacement du dépôt %s - OK" % repo_name, Qgis.Info)
+                    except Exception as e:
+                        self.log("Erreur lors de la l'ajout/le remplacement du dépôt %s : %s" % (repo_name, str(e)), Qgis.Critical)
 
     def install_plugins(self):
         self.log("Vérification des plugins requis ...", Qgis.Info)
@@ -172,7 +174,9 @@ class StartupDSIUN:
                 plugins_list = item.get("names", [])
                 plugins_domains = [x.lower() for x in item.get("domains", [])]
                 plugins_users = [x.lower() for x in item.get("users", [])]
-                if self.check_users_and_domains(plugins_users, plugins_domains):
+                plugins_envs = [x.lower() for x in item.get("envs", [])]
+
+                if self.check_envs(plugins_envs) and self.check_users_and_domains(plugins_users, plugins_domains):
                     plugins.extend(plugins_list)
 
             available_plugins_keys = self.plugins_data.all().keys()
@@ -215,8 +219,9 @@ class StartupDSIUN:
             plugin_name = config.get("plugin_name", "")
             plugin_config_domains = [x.lower() for x in config.get("domains", [])]
             plugin_config_users = [x.lower() for x in config.get("users", [])]
+            plugin_config_envs = [x.lower() for x in config.get("envs", [])]
 
-            if self.check_users_and_domains(plugin_config_users, plugin_config_domains):
+            if self.check_envs(plugin_config_envs) and self.check_users_and_domains(plugin_config_users, plugin_config_domains):
                 if plugin_name == "custom_catalog":
                     catalogs = config.get("config", {}).get("catalogs", [])
                     self.get_catalog_config(catalogs)
@@ -316,8 +321,9 @@ class StartupDSIUN:
                 auth_pass = auth_config.get("pass", "")
                 auth_domains = [x.lower() for x in auth_config.get("domains", [])]
                 auth_users = [x.lower() for x in auth_config.get("users", [])]
+                auth_envs = [x.lower() for x in auth_config.get("envs", [])]
 
-                if self.check_users_and_domains(auth_users, auth_domains):
+                if self.check_envs(auth_envs) and self.check_users_and_domains(auth_users, auth_domains):
                     if self.auth_id in ids:
                         self.log("La configuration %s est déjà présente" % str(self.auth_id), Qgis.Info)
 
@@ -517,8 +523,9 @@ class StartupDSIUN:
             cnx_configs = cnx.get("configs", {})
             cnx_domains = [x.lower() for x in cnx.get("domains", [])]
             cnx_users = [x.lower() for x in cnx.get("users", [])]
+            cnx_envs = [x.lower() for x in cnx.get("envs", [])]
 
-            if self.check_users_and_domains(cnx_users, cnx_domains):
+            if self.check_envs(cnx_envs) and self.check_users_and_domains(cnx_users, cnx_domains):
                 try:
                     provider = QgsProviderRegistry.instance().providerMetadata(cnx_provider)
                     uri = QgsDataSourceUri()
@@ -557,8 +564,9 @@ class StartupDSIUN:
             f_name = favorite.get("name", f_path)
             f_domains = [x.lower() for x in favorite.get("domains", [])]
             f_users = [x.lower() for x in favorite.get("users", [])]
+            f_envs = [x.lower() for x in favorite.get("envs", [])]
 
-            if self.check_users_and_domains(f_users, f_domains):
+            if self.check_envs(f_envs) and self.check_users_and_domains(f_users, f_domains):
                 fi = QgsFavoritesItem(None, "")
 
                 # Vérification de la présence du marque-page
@@ -591,8 +599,9 @@ class StartupDSIUN:
             cnx_password = wfs_c.get("password", "")
             cnx_domains = [x.lower() for x in wfs_c.get("domains", [])]
             cnx_users = [x.lower() for x in wfs_c.get("users", [])]
+            cnx_envs = [x.lower() for x in wfs_c.get("envs", [])]
 
-            if self.check_users_and_domains(cnx_users, cnx_domains):
+            if self.check_envs(cnx_envs) and self.check_users_and_domains(cnx_users, cnx_domains):
                 s = QgsSettings()
                 s.beginGroup('qgis')
                 s.beginGroup('connections-wfs')
@@ -633,8 +642,9 @@ class StartupDSIUN:
             cnx_password = wms_c.get("password", "")
             cnx_domains = [x.lower() for x in wms_c.get("domains", [])]
             cnx_users = [x.lower() for x in wms_c.get("users", [])]
+            cnx_envs = [x.lower() for x in wms_c.get("envs", [])]
 
-            if self.check_users_and_domains(cnx_users, cnx_domains):
+            if self.check_envs(cnx_envs) and self.check_users_and_domains(cnx_users, cnx_domains):
                 s = QgsSettings()
                 s.beginGroup('qgis')
                 s.beginGroup('connections-wms')
@@ -671,8 +681,9 @@ class StartupDSIUN:
             cnx_password = arcgis_c.get("password", "")
             cnx_domains = [x.lower() for x in arcgis_c.get("domains", [])]
             cnx_users = [x.lower() for x in arcgis_c.get("users", [])]
+            cnx_envs = [x.lower() for x in arcgis_c.get("envs", [])]
 
-            if self.check_users_and_domains(cnx_users, cnx_domains):
+            if self.check_envs(cnx_envs) and self.check_users_and_domains(cnx_users, cnx_domains):
                 s = QgsSettings()
                 s.beginGroup('qgis')
                 s.beginGroup('connections-arcgisfeatureserver')
@@ -700,10 +711,11 @@ class StartupDSIUN:
             t_path = template.get("path", "")
             t_domains = [x.lower() for x in template.get("domains", [])]
             t_users = [x.lower() for x in template.get("users", [])]
+            t_envs = [x.lower() for x in template.get("users", [])]
 
             layouts = QgsApplication.layoutTemplatePaths()
 
-            if t_path and self.check_users_and_domains(t_users, t_domains):
+            if t_path and self.check_users_and_domains(t_users, t_domains) and self.check_envs(t_envs):
 
                 if t_path not in layouts:
                     layouts.append(t_path)
@@ -722,10 +734,11 @@ class StartupDSIUN:
             svg_path = item.get("path", "")
             svg_domains = [x.lower() for x in item.get("domains", [])]
             svg_users = [x.lower() for x in item.get("users", [])]
+            svg_envs = [x.lower() for x in item.get("envs", [])]
 
             qgs_svg_paths = QgsApplication.svgPaths()
 
-            if svg_path and self.check_users_and_domains(svg_users, svg_domains):
+            if svg_path and self.check_users_and_domains(svg_users, svg_domains) and self.check_envs(svg_envs):
                 if svg_path not in qgs_svg_paths:
                     qgs_svg_paths.append(svg_path)
                     QgsApplication.setDefaultSvgPaths(qgs_svg_paths)
@@ -743,8 +756,9 @@ class StartupDSIUN:
             var_value = var.get("value", "")
             var_domains = [x.lower() for x in var.get("domains", [])]
             var_users = [x.lower() for x in var.get("users", [])]
+            var_envs = [x.lower() for x in var.get("envs", [])]
 
-            if var_name and self.check_users_and_domains(var_users, var_domains):
+            if var_name and self.check_users_and_domains(var_users, var_domains) and self.check_envs(var_envs):
                 current_custom_vars = s.value("customEnvVars", [])
                 if isinstance(current_custom_vars, str):
                     current_custom_vars = [current_custom_vars]
@@ -832,6 +846,14 @@ class StartupDSIUN:
             return True
         else:
             return False
+        
+    def check_envs(self, envs):
+        env = self.get_env()
+        if env in envs or "all" in envs:
+            return True
+        else:
+            return False
+
 
     def set_menu_from_project_config(self, config):
         self.log("Paramétrage du plugin menu_from_project", Qgis.Info)
@@ -921,8 +943,9 @@ class StartupDSIUN:
             settings = global_setting.get("settings", [])
             settings_domains = [x.lower() for x in global_setting.get("domains", [])]
             settings_users = [x.lower() for x in global_setting.get("users", [])]
+            settings_envs = [x.lower() for x in global_setting.get("envs", [])]
 
-            if self.check_users_and_domains(settings_users, settings_domains):
+            if self.check_envs(settings_envs) and self.check_users_and_domains(settings_users, settings_domains):
                 for setting in settings:
                     setting_path = setting.get("path", "")
                     setting_value = setting.get("value", "")
@@ -944,8 +967,9 @@ class StartupDSIUN:
             drives = nd.get("drives", [])
             nd_domains = [x.lower() for x in nd.get("domains", [])]
             nd_users = [x.lower() for x in nd.get("users", [])]
+            nd_envs = [x.lower() for x in nd.get("envs", [])]
 
-            if self.check_users_and_domains(nd_users, nd_domains):
+            if self.check_envs(nd_envs) and self.check_users_and_domains(nd_users, nd_domains):
                 for d in drives:
                     subprocess.run(["start","/min", "explorer", "%s" % d], shell=True)
                     subprocess.run(["C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe","-Command",'(New-Object -ComObject Shell.Application).Windows() | Where-Object{$_.Document.Folder.Self.Path -eq "%s" } | ForEach-Object{ $_.Quit() }' % d], shell=True)
@@ -960,8 +984,9 @@ class StartupDSIUN:
             cs_colors = color_scheme.get("colors", [])
             cs_domains = [x.lower() for x in color_scheme.get("domains", [])]
             cs_users = [x.lower() for x in color_scheme.get("users", [])]
+            cs_envs = [x.lower() for x in color_scheme.get("envs", [])]
 
-            if self.check_users_and_domains(cs_users, cs_domains):
+            if self.check_envs(cs_envs) and self.check_users_and_domains(cs_users, cs_domains):
                 new_color_scheme = NewColorScheme(name=cs_name, json_colors=cs_colors)
                 csr = QgsApplication.colorSchemeRegistry()
                 csr.addColorScheme(new_color_scheme)

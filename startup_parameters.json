@@ -7,13 +7,13 @@
         "drives": ["X:\\", "R:\\"],
         "domains": [""],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "drives": ["W:\\"],
         "domains": ["aelb"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "plugins": {
@@ -22,7 +22,7 @@
             "name": "Dépôt DSIUN en développement",
             "url": "https://geoplugins-dev.lesagencesdeleau.eu",
             "authcfg": "",
-            "env": ["dev"]
+            "envs": ["dev"]
         }
         ],
         "plugins_names": [
@@ -33,7 +33,7 @@
             ],
             "domains": ["all"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "names": [
@@ -42,7 +42,7 @@
             ],
             "domains": ["dag", "aelb"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "names": [
@@ -50,7 +50,7 @@
             ],
             "domains": ["aelb"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "names": [
@@ -63,7 +63,7 @@
             ],
             "domains": ["dag"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "names": [
@@ -73,7 +73,7 @@
             ],
             "domains": ["domntade"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "names": [
@@ -81,7 +81,7 @@
             ],
             "domains": ["aerm.fr"],
             "users": ["aubin_ni"],
-            "env": ["all"]
+            "envs": ["all"]
         }
         ],
         "configs": [
@@ -99,7 +99,7 @@
             },
             "domains": [""],
             "users": ["aubin_ni"],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "plugin_name": "menu_from_project",
@@ -141,7 +141,7 @@
             },
             "domains": ["dag"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "plugin_name": "creer_menus",
@@ -150,7 +150,7 @@
             },
             "domains": ["dag"],
             "users": [""],
-            "env": ["all"]
+            "envs": ["all"]
         },
         {
             "plugin_name": "menu_from_project",
@@ -206,7 +206,7 @@
             },
             "domains": ["aelb"],
             "users": ["aubin_ni"],
-            "env": ["all"]
+            "envs": ["all"]
         }
         ]
     },
@@ -216,7 +216,7 @@
         "name": "Authentification Agences de l'eau - Dev",
         "domains": ["all"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "id": "aeap001",
@@ -225,7 +225,7 @@
         "pass": "lecsig",
         "domains": ["eauap"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "id": "aeap002",
@@ -233,7 +233,7 @@
         "user": "sig",
         "domains": ["eauap"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "id": "aermc01",
@@ -242,7 +242,7 @@
         "pass": "leciglec",
         "domains": ["domntade"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "id": "aelb001",
@@ -251,7 +251,7 @@
         "pass": "V1susPr0d",
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "qgis": {
@@ -278,7 +278,7 @@
                 ],
                 "domains": ["all"],
                 "users": [],
-                "env": ["all"]
+                "envs": ["all"]
             }
         ]
     },
@@ -292,7 +292,7 @@
         "auth_id": "dsiun01",
         "domains": [""],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "qgis_provider": "oracle",
@@ -303,7 +303,7 @@
         "auth_id": "aeap001",
         "domains": ["eauap"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "qgis_provider": "oracle",
@@ -314,7 +314,7 @@
         "auth_id": "aeap002",
         "domains": ["eauap"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "qgis_provider": "postgres",
@@ -325,7 +325,7 @@
         "auth_id": "aermc01",
         "domains": ["domntade"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "qgis_provider": "postgres",
@@ -339,7 +339,7 @@
         },
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "qgis_provider": "postgres",
@@ -353,7 +353,7 @@
         },
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "qgis_provider": "postgres",
@@ -367,7 +367,7 @@
         },
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "favorites": [
@@ -376,7 +376,7 @@
         "name": "DATAGEO",
         "domains": ["eauap"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "wfs_connections": [
@@ -388,14 +388,14 @@
         "ignoreAxisOrientation": false,
         "domains": [],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "IGN - Géoplateforme",
         "url" : "https://data.geopf.fr/wfs/ows?",
         "version" : "2.0.0",
         "domains": ["all"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "SANDRE",
@@ -403,7 +403,7 @@
         "version" : "2.0.0",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "AESN - ArcGIS Server",
@@ -411,28 +411,28 @@
         "version" : "1.1.0",
         "domains": ["aesn1"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "BRGM - Géologie",
         "url": "http://geoservices.brgm.fr/geologie",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "BRGM - Risques",
         "url": "http://geoservices.brgm.fr/risques",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "BRGM - Obs. des Matériaux",
         "url": "http://geoservices.brgm.fr/odmgm",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "wms_connections": [
@@ -441,63 +441,63 @@
         "url" : "https://wxs.ign.fr/essentiels/geoportail/r/wms?",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "AEAP - Portail de bassin",
         "url": "https://artois-picardie.eaufrance.fr/geoserver/TEST_IDG/wms?",
         "domains": ["eauap"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "IGN - Géoplateforme - WMTS",
         "url": "https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities",
         "domains": ["all"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "IGN - Géoplateforme - WMS Raster",
         "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "IGN - Géoplateforme - WMS Vecteur",
         "url": "https://data.geopf.fr/wms-v/ows?service=wms&version=1.3.0&request=GetCapabilities",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "SANDRE",
         "url": "https://services.sandre.eaufrance.fr/geo/sandre",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "BRGM - Géologie",
         "url": "http://geoservices.brgm.fr/geologie",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "BRGM - Risques",
         "url": "http://geoservices.brgm.fr/risques",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "BRGM - Obs. des Matériaux",
         "url": "http://geoservices.brgm.fr/odmgm",
         "domains": ["all"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "arcgis_connections": [
@@ -510,7 +510,7 @@
         "authcfg": "",
         "domains": ["aerm.fr"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "composer_templates": [
@@ -518,13 +518,13 @@
         "path": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/11_presentation/113_mise_en_page_qgis",
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "path": "N:/Applis/SIG/_Commun_sig/QGis/modele_composeur",
         "domains": ["domntade"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "svg_paths": [
@@ -532,13 +532,13 @@
         "path": "N:/Applis/SIG/_Commun_sig/QGis/svg",
         "domains": ["domntade"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "path": "R:/Espace_Correspondants_SIG/Astuces_Outils/SVG_symboles",
         "domains": ["dag"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "custom_env_vars": [
@@ -547,14 +547,14 @@
         "value": "\\\\domntade.eaurmc.fr\\aermc\\applis\\SIG\\_Commun_sig\\QGis\\plugins_rmc",
         "domains": ["domntade"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "QGIS_PLUGINPATH",
         "value": "\\\\NAS02\\groupe\\Refgeo\\Espace_Correspondants_SIG\\Astuces_Outils\\QGIS310_PLUGINS",
         "domains": ["dag"],
         "users": [""],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ],
     "color_schemes": [
@@ -588,7 +588,7 @@
         ],
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "Etat chimique de surface",
@@ -608,7 +608,7 @@
         ],
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "Etat chimique souterrain",
@@ -628,7 +628,7 @@
         ],
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "Niveau de confiance de l'état",
@@ -652,7 +652,7 @@
         ],
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         },
         {
         "name": "Pression à l'origine du risque",
@@ -684,7 +684,7 @@
         ],
         "domains": ["aelb"],
         "users": ["aubin_ni"],
-        "env": ["all"]
+        "envs": ["all"]
         }
     ]
 }
