@@ -55,7 +55,7 @@ class StartupDSIUN:
         if profile_name == "DSIUN_dev":
             return "dev"
         
-        elif profile_name == "DSIUN_rec":
+        elif profile_name in ["DSIUN_rec", "DSIUN_int"]:
             return "rec"
         
         elif profile_name == "DSIUN":
