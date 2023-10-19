@@ -454,6 +454,9 @@ class StartupDSIUN:
                         os.makedirs(qgis_profile_path, exist_ok=True)
                         with open(config_profile_path, mode='w'):
                             pass
+                        
+            if self.get_env() == "":
+                self.log("Le profil utilisé n'est pas administré par la DSIUN", Qgis.Warning)
 
         except Exception as e:
             self.log("Erreur lors de la vérification des profiles : %s" % str(e), Qgis.Critical)
