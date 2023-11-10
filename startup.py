@@ -28,6 +28,7 @@ class StartupDSIUN:
         #################################
 
         self.pyplugin_inst = pyplugin_installer.instance()
+        pyplugin_installer.instance().fetchAvailablePlugins(True)
         self.plugins_data = pyplugin_installer.installer_data.plugins
         # Un bug dans userProfileManager() dans les versions inférieures à 3.30.0 ne permet pas d'interagir correctement
         # avec les profils utilisateurs : https://github.com/qgis/QGIS/issues/48337
