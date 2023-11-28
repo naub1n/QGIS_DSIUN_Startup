@@ -29,7 +29,8 @@
         {
             "names": [
             "project_publisher",
-            "custom_catalog"
+            "custom_catalog",
+            "processing"
             ],
             "domains": ["all"],
             "users": [""],
