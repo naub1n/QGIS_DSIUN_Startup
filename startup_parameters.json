@@ -46,7 +46,8 @@
         },
         {
             "names": [
-            "searchlayers"
+            "searchlayers",
+            "processing"
             ],
             "domains": ["aelb"],
             "users": [""],
