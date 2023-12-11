@@ -715,7 +715,7 @@ class StartupDSIUN:
             t_path = template.get("path", "")
             t_domains = [x.lower() for x in template.get("domains", [])]
             t_users = [x.lower() for x in template.get("users", [])]
-            t_envs = [x.lower() for x in template.get("users", [])]
+            t_envs = [x.lower() for x in template.get("envs", [])]
 
             layouts = QgsApplication.layoutTemplatePaths()
 
