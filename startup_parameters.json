@@ -4,211 +4,211 @@
     "profiles": ["DSIUN_dev", "DSIUN_rec", "DSIUN"],
     "network_drives": [
         {
-        "drives": ["X:\\", "R:\\"],
-        "domains": [""],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "drives": ["X:\\", "R:\\"],
+            "domains": [""],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "drives": ["W:\\"],
-        "domains": ["aelb"],
-        "users": [""],
-        "envs": ["all"]
+            "drives": ["W:\\"],
+            "domains": ["aelb"],
+            "users": [""],
+            "envs": ["all"]
         }
     ],
     "plugins": {
         "repositories": [
-        {
-            "name": "Dépôt DSIUN en développement",
-            "url": "https://geoplugins-dev.lesagencesdeleau.eu",
-            "authcfg": "",
-            "envs": ["dev"]
-        }
+            {
+                "name": "Dépôt DSIUN en développement",
+                "url": "https://geoplugins-dev.lesagencesdeleau.eu",
+                "authcfg": "",
+                "envs": ["dev"]
+            }
         ],
         "plugins_names": [
-        {
-            "names": [
-            "project_publisher",
-            "custom_catalog",
-            "processing"
-            ],
-            "domains": ["all"],
-            "users": [""],
-            "envs": ["dev"]
-        },
-        {
-            "names": [
-            "menu_from_project",
-            "SpreadsheetLayers"
-            ],
-            "domains": ["dag", "aelb"],
-            "users": [""],
-            "envs": ["all"]
-        },
-        {
-            "names": [
-            "searchlayers"
-            ],
-            "domains": ["aelb"],
-            "users": [""],
-            "envs": ["all"]
-        },
-        {
-            "names": [
-                "Hotlink",
-                "aeag",
-                "aeag_search",
-                "mask",
-                "creer_menus",
-                "MemoryLayerSaver"
-            ],
-            "domains": ["dag"],
-            "users": [""],
-            "envs": ["all"]
-        },
-        {
-            "names": [
-                "gestionthemes",
-                "locouv",
-                "rechpg"
-            ],
-            "domains": ["domntade"],
-            "users": [""],
-            "envs": ["all"]
-        },
-        {
-            "names": [
-                "datagrandest"
-            ],
-            "domains": ["aerm.fr"],
-            "users": ["aubin_ni"],
-            "envs": ["all"]
-        }
+            {
+                "names": [
+                    "project_publisher",
+                    "custom_catalog",
+                    "processing"
+                ],
+                "domains": ["all"],
+                "users": [""],
+                "envs": ["dev"]
+            },
+            {
+                "names": [
+                    "menu_from_project",
+                    "SpreadsheetLayers"
+                ],
+                "domains": ["dag", "aelb"],
+                "users": [""],
+                "envs": ["all"]
+            },
+            {
+                "names": [
+                    "searchlayers"
+                ],
+                "domains": ["aelb"],
+                "users": [""],
+                "envs": ["all"]
+            },
+            {
+                "names": [
+                    "Hotlink",
+                    "aeag",
+                    "aeag_search",
+                    "mask",
+                    "creer_menus",
+                    "MemoryLayerSaver"
+                ],
+                "domains": ["dag"],
+                "users": [""],
+                "envs": ["all"]
+            },
+            {
+                "names": [
+                    "gestionthemes",
+                    "locouv",
+                    "rechpg"
+                ],
+                "domains": ["domntade"],
+                "users": [""],
+                "envs": ["all"]
+            },
+            {
+                "names": [
+                    "datagrandest"
+                ],
+                "domains": ["aerm.fr"],
+                "users": ["aubin_ni"],
+                "envs": ["all"]
+            }
         ],
         "configs": [
-        {
-            "plugin_name": "custom_catalog",
-            "config": {
-                "catalogs": [
-                    {
-                        "name": "Catalogue DSIUN",
-                        "type": "json",
-                        "link": "https://raw.githubusercontent.com/naub1n/lade_dsiun_sig/developpement/qgis/catalogues/dsiun.json",
-                        "qgisauthconfigid": ""
-                    }
-                ]
+            {
+                "plugin_name": "custom_catalog",
+                "config": {
+                    "catalogs": [
+                        {
+                            "name": "Catalogue DSIUN",
+                            "type": "json",
+                            "link": "https://raw.githubusercontent.com/naub1n/lade_dsiun_sig/developpement/qgis/catalogues/dsiun.json",
+                            "qgisauthconfigid": ""
+                        }
+                    ]
+                },
+                "domains": [""],
+                "users": ["aubin_ni"],
+                "envs": ["dev"]
             },
-            "domains": [""],
-            "users": ["aubin_ni"],
-            "envs": ["dev"]
-        },
-        {
-            "plugin_name": "menu_from_project",
-            "config": {
-            "options": {
-                "is_setup_visible": true,
-                "optionTooltip": true,
-                "optionCreateGroup": false,
-                "optionLoadAll": true,
-                "optionSourceMD": "ogc"
+            {
+                "plugin_name": "menu_from_project",
+                "config": {
+                    "options": {
+                        "is_setup_visible": true,
+                        "optionTooltip": true,
+                        "optionCreateGroup": false,
+                        "optionLoadAll": true,
+                        "optionSourceMD": "ogc"
+                    },
+                    "replace_projects": true,
+                    "projects": [
+                        {
+                            "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DonneesAEAG_1.qgs",
+                            "location": "new",
+                            "name": "DONNEES",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DonneesAEAG_2.qgs",
+                            "location": "merge",
+                            "name": "DonneesAEAG_2",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DonneesAEAG_3.qgs",
+                            "location": "merge",
+                            "name": "DonneesAEAG_3",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DCE.qgs",
+                            "location": "new",
+                            "name": "DCE",
+                            "type_storage": "file"
+                        }
+                    ]
+                },
+                "domains": ["dag"],
+                "users": [""],
+                "envs": ["all"]
             },
-            "replace_projects": true,
-            "projects": [
-                {
-                "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DonneesAEAG_1.qgs",
-                "location": "new",
-                "name": "DONNEES",
-                "type_storage": "file"
+            {
+                "plugin_name": "creer_menus",
+                "config": {
+                    "fileMenus": "\\\\nas02\\groupe\\Refgeo\\Espace_Correspondants_SIG\\Astuces_Outils\\QGIS310_PLUGINS\\Menu_carte_AEAG_310.xml"
                 },
-                {
-                "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DonneesAEAG_2.qgs",
-                "location": "merge",
-                "name": "DonneesAEAG_2",
-                "type_storage": "file"
-                },
-                {
-                "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DonneesAEAG_3.qgs",
-                "location": "merge",
-                "name": "DonneesAEAG_3",
-                "type_storage": "file"
-                },
-                {
-                "file": "R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS310_PLUGINS/DCE.qgs",
-                "location": "new",
-                "name": "DCE",
-                "type_storage": "file"
-                }
-            ]
+                "domains": ["dag"],
+                "users": [""],
+                "envs": ["all"]
             },
-            "domains": ["dag"],
-            "users": [""],
-            "envs": ["all"]
-        },
-        {
-            "plugin_name": "creer_menus",
-            "config": {
-            "fileMenus": "\\\\nas02\\groupe\\Refgeo\\Espace_Correspondants_SIG\\Astuces_Outils\\QGIS310_PLUGINS\\Menu_carte_AEAG_310.xml"
-            },
-            "domains": ["dag"],
-            "users": [""],
-            "envs": ["all"]
-        },
-        {
-            "plugin_name": "menu_from_project",
-            "config": {
-            "options": {
-                "optionSourceMD": "ogc"
-            },
-            "replace_projects": false,
-            "projects": [
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_A_E.qgz",
-                    "location": "new",
-                    "name": "DONNEES",
-                    "type_storage": "file"
+            {
+                "plugin_name": "menu_from_project",
+                "config": {
+                    "options": {
+                        "optionSourceMD": "ogc"
+                    },
+                    "replace_projects": false,
+                    "projects": [
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_A_E.qgz",
+                            "location": "new",
+                            "name": "DONNEES",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _F_M.qgz",
+                            "location": "merge",
+                            "name": "projet_donnees_F_M",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_N_Q.qgz",
+                            "location": "merge",
+                            "name": "projet_donnees_N_Q",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _R_Z.qgz",
+                            "location": "merge",
+                            "name": "projet_donnees_R_Z",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_edl2019.qgz",
+                            "location": "new",
+                            "name": "EDL_2019",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_littoral.qgz",
+                            "location": "new",
+                            "name": "LITTORAL",
+                            "type_storage": "file"
+                        },
+                        {
+                            "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_geoservices.qgz",
+                            "location": "new",
+                            "name": "GEOSERVICES",
+                            "type_storage": "file"
+                        }
+                    ]
                 },
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _F_M.qgz",
-                    "location": "merge",
-                    "name": "projet_donnees_F_M",
-                    "type_storage": "file"
-                },
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_N_Q.qgz",
-                    "location": "merge",
-                    "name": "projet_donnees_N_Q",
-                    "type_storage": "file"
-                },
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _R_Z.qgz",
-                    "location": "merge",
-                    "name": "projet_donnees_R_Z",
-                    "type_storage": "file"
-                },
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_edl2019.qgz",
-                    "location": "new",
-                    "name": "EDL_2019",
-                    "type_storage": "file"
-                },
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_littoral.qgz",
-                    "location": "new",
-                    "name": "LITTORAL",
-                    "type_storage": "file"
-                },
-                {
-                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_geoservices.qgz",
-                    "location": "new",
-                    "name": "GEOSERVICES",
-                    "type_storage": "file"
-                }
-            ]
-            },
-            "domains": ["aelb"],
-            "users": ["aubin_ni"],
-            "envs": ["all"]
-        }
+                "domains": ["aelb"],
+                "users": ["aubin_ni"],
+                "envs": ["all"]
+            }
         ]
     },
     "authentications": [
