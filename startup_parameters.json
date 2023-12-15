@@ -55,12 +55,12 @@
         },
         {
             "names": [
-            "Hotlink",
-            "aeag",
-            "aeag_search",
-            "mask",
-            "creer_menus",
-            "MemoryLayerSaver"
+                "Hotlink",
+                "aeag",
+                "aeag_search",
+                "mask",
+                "creer_menus",
+                "MemoryLayerSaver"
             ],
             "domains": ["dag"],
             "users": [""],
@@ -68,9 +68,9 @@
         },
         {
             "names": [
-            "gestionthemes",
-            "locouv",
-            "rechpg"
+                "gestionthemes",
+                "locouv",
+                "rechpg"
             ],
             "domains": ["domntade"],
             "users": [""],
@@ -78,7 +78,7 @@
         },
         {
             "names": [
-            "datagrandest"
+                "datagrandest"
             ],
             "domains": ["aerm.fr"],
             "users": ["aubin_ni"],
@@ -91,10 +91,10 @@
             "config": {
                 "catalogs": [
                     {
-                    "name": "Catalogue DSIUN",
-                    "type": "json",
-                    "link": "https://raw.githubusercontent.com/naub1n/lade_dsiun_sig/developpement/qgis/catalogues/dsiun.json",
-                    "qgisauthconfigid": ""
+                        "name": "Catalogue DSIUN",
+                        "type": "json",
+                        "link": "https://raw.githubusercontent.com/naub1n/lade_dsiun_sig/developpement/qgis/catalogues/dsiun.json",
+                        "qgisauthconfigid": ""
                     }
                 ]
             },
@@ -162,46 +162,46 @@
             "replace_projects": false,
             "projects": [
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_A_E.qgz",
-                "location": "new",
-                "name": "DONNEES",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_A_E.qgz",
+                    "location": "new",
+                    "name": "DONNEES",
+                    "type_storage": "file"
                 },
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _F_M.qgz",
-                "location": "merge",
-                "name": "projet_donnees_F_M",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _F_M.qgz",
+                    "location": "merge",
+                    "name": "projet_donnees_F_M",
+                    "type_storage": "file"
                 },
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_N_Q.qgz",
-                "location": "merge",
-                "name": "projet_donnees_N_Q",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees_N_Q.qgz",
+                    "location": "merge",
+                    "name": "projet_donnees_N_Q",
+                    "type_storage": "file"
                 },
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _R_Z.qgz",
-                "location": "merge",
-                "name": "projet_donnees_R_Z",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_donnees _R_Z.qgz",
+                    "location": "merge",
+                    "name": "projet_donnees_R_Z",
+                    "type_storage": "file"
                 },
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_edl2019.qgz",
-                "location": "new",
-                "name": "EDL_2019",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_edl2019.qgz",
+                    "location": "new",
+                    "name": "EDL_2019",
+                    "type_storage": "file"
                 },
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_littoral.qgz",
-                "location": "new",
-                "name": "LITTORAL",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_littoral.qgz",
+                    "location": "new",
+                    "name": "LITTORAL",
+                    "type_storage": "file"
                 },
                 {
-                "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_geoservices.qgz",
-                "location": "new",
-                "name": "GEOSERVICES",
-                "type_storage": "file"
+                    "file": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/14_extension/layer_menu_from_projet/projet/projet_geoservices.qgz",
+                    "location": "new",
+                    "name": "GEOSERVICES",
+                    "type_storage": "file"
                 }
             ]
             },
@@ -213,46 +213,46 @@
     },
     "authentications": [
         {
-        "id": "dsiun01",
-        "name": "Authentification Agences de l'eau",
-        "domains": ["all"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "id": "dsiun01",
+            "name": "Authentification Agences de l'eau",
+            "domains": ["all"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "id": "aeap001",
-        "name": "AEAP - Consultation Ref. Geo.",
-        "user": "lecsig",
-        "pass": "lecsig",
-        "domains": ["eauap"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "id": "aeap001",
+            "name": "AEAP - Consultation Ref. Geo.",
+            "user": "lecsig",
+            "pass": "lecsig",
+            "domains": ["eauap"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "id": "aeap002",
-        "name": "AEAP - Administration Ref. Geo.",
-        "user": "sig",
-        "domains": ["eauap"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "id": "aeap002",
+            "name": "AEAP - Administration Ref. Geo.",
+            "user": "sig",
+            "domains": ["eauap"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "id": "aermc01",
-        "name": "AERMC - Consultation Ref. Geo.",
-        "user": "lecig",
-        "pass": "leciglec",
-        "domains": ["domntade"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "id": "aermc01",
+            "name": "AERMC - Consultation Ref. Geo.",
+            "user": "lecig",
+            "pass": "leciglec",
+            "domains": ["domntade"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "id": "aelb001",
-        "name": "AELB - Consultation GeoDiff",
-        "user": "bdgeo_diff_visus",
-        "pass": "V1susPr0d",
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "id": "aelb001",
+            "name": "AELB - Consultation GeoDiff",
+            "user": "bdgeo_diff_visus",
+            "pass": "V1susPr0d",
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ],
     "qgis": {
@@ -285,261 +285,261 @@
     },
     "db_connections": [
         {
-        "qgis_provider": "postgres",
-        "name": "DSIUN - Travail",
-        "host": "",
-        "port": "5432",
-        "dbname": "data",
-        "auth_id": "dsiun01",
-        "domains": [""],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "qgis_provider": "postgres",
+            "name": "DSIUN - Travail",
+            "host": "",
+            "port": "5432",
+            "dbname": "data",
+            "auth_id": "dsiun01",
+            "domains": [""],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "qgis_provider": "oracle",
-        "name": "AEAP - Ref. Geo - Consultation",
-        "host": "rh77-ora12-prd.eauap.com",
-        "port": "1521",
-        "dbname": "aeap.eauap.com",
-        "auth_id": "aeap001",
-        "domains": ["eauap"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "qgis_provider": "oracle",
+            "name": "AEAP - Ref. Geo - Consultation",
+            "host": "rh77-ora12-prd.eauap.com",
+            "port": "1521",
+            "dbname": "aeap.eauap.com",
+            "auth_id": "aeap001",
+            "domains": ["eauap"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "qgis_provider": "oracle",
-        "name": "AEAP - Ref. Geo - Administration",
-        "host": "rh77-ora12-prd.eauap.com",
-        "port": "1521",
-        "dbname": "aeap.eauap.com",
-        "auth_id": "aeap002",
-        "domains": ["eauap"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "qgis_provider": "oracle",
+            "name": "AEAP - Ref. Geo - Administration",
+            "host": "rh77-ora12-prd.eauap.com",
+            "port": "1521",
+            "dbname": "aeap.eauap.com",
+            "auth_id": "aeap002",
+            "domains": ["eauap"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "qgis_provider": "postgres",
-        "name": "AERMC - Ref. Geo - Consultation",
-        "host": "postgis.domntade.eaurmc.fr",
-        "port": "5432",
-        "dbname": "exig",
-        "auth_id": "aermc01",
-        "domains": ["domntade"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "qgis_provider": "postgres",
+            "name": "AERMC - Ref. Geo - Consultation",
+            "host": "postgis.domntade.eaurmc.fr",
+            "port": "5432",
+            "dbname": "exig",
+            "auth_id": "aermc01",
+            "domains": ["domntade"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "qgis_provider": "postgres",
-        "name": "AELB - Carto AELB - Consultation",
-        "host": "bdgeodiff.siege.aelb",
-        "port": "11410",
-        "dbname": "carto_aelb",
-        "auth_id": "aelb001",
-        "configs": {
-            "allowGeometrylessTables": true
-        },
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
-        },
-        {
-        "qgis_provider": "postgres",
-        "name": "AELB - Habillage - Consultation",
-        "host": "bdgeodiff.siege.aelb",
-        "port": "11410",
-        "dbname": "habillage",
-        "auth_id": "aelb001",
-        "configs": {
-            "allowGeometrylessTables": true
-        },
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "qgis_provider": "postgres",
+            "name": "AELB - Carto AELB - Consultation",
+            "host": "bdgeodiff.siege.aelb",
+            "port": "11410",
+            "dbname": "carto_aelb",
+            "auth_id": "aelb001",
+            "configs": {
+                "allowGeometrylessTables": true
+            },
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "qgis_provider": "postgres",
-        "name": "AELB - PSC - Consultation",
-        "host": "bdgeodiff.siege.aelb",
-        "port": "11410",
-        "dbname": "psc",
-        "auth_id": "aelb001",
-        "configs": {
-            "allowGeometrylessTables": true
+            "qgis_provider": "postgres",
+            "name": "AELB - Habillage - Consultation",
+            "host": "bdgeodiff.siege.aelb",
+            "port": "11410",
+            "dbname": "habillage",
+            "auth_id": "aelb001",
+            "configs": {
+                "allowGeometrylessTables": true
+            },
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+        {
+            "qgis_provider": "postgres",
+            "name": "AELB - PSC - Consultation",
+            "host": "bdgeodiff.siege.aelb",
+            "port": "11410",
+            "dbname": "psc",
+            "auth_id": "aelb001",
+            "configs": {
+                "allowGeometrylessTables": true
+            },
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ],
     "favorites": [
         {
-        "path": "c:\\mnt\\gisuser\\DATAGEO",
-        "name": "DATAGEO",
-        "domains": ["eauap"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "path": "c:\\mnt\\gisuser\\DATAGEO",
+            "name": "DATAGEO",
+            "domains": ["eauap"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ],
     "wfs_connections": [
         {
-        "name": "IGN - Essentiels",
-        "url" : "https://wxs.ign.fr/essentiels/geoportail/wfs?",
-        "version" : "2.0.0",
-        "pagesize": 1000,
-        "ignoreAxisOrientation": false,
-        "domains": [],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "IGN - Essentiels",
+            "url" : "https://wxs.ign.fr/essentiels/geoportail/wfs?",
+            "version" : "2.0.0",
+            "pagesize": 1000,
+            "ignoreAxisOrientation": false,
+            "domains": [],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "IGN - Géoplateforme",
-        "url" : "https://data.geopf.fr/wfs/ows?",
-        "version" : "2.0.0",
-        "domains": ["all"],
-        "envs": ["all"]
+            "name": "IGN - Géoplateforme",
+            "url" : "https://data.geopf.fr/wfs/ows?",
+            "version" : "2.0.0",
+            "domains": ["all"],
+            "envs": ["all"]
         },
         {
-        "name": "SANDRE",
-        "url": "https://services.sandre.eaufrance.fr/geo/sandre",
-        "version" : "2.0.0",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "SANDRE",
+            "url": "https://services.sandre.eaufrance.fr/geo/sandre",
+            "version" : "2.0.0",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "AESN - ArcGIS Server",
-        "url": "http://sig-app.aesn.fr/arcgis/services/SIG/AESN_CONSULT/MapServer/WFSServer?VERSION=1.1.0",
-        "version" : "1.1.0",
-        "domains": ["aesn1"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "AESN - ArcGIS Server",
+            "url": "http://sig-app.aesn.fr/arcgis/services/SIG/AESN_CONSULT/MapServer/WFSServer?VERSION=1.1.0",
+            "version" : "1.1.0",
+            "domains": ["aesn1"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "BRGM - Géologie",
-        "url": "http://geoservices.brgm.fr/geologie",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "BRGM - Géologie",
+            "url": "http://geoservices.brgm.fr/geologie",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "BRGM - Risques",
-        "url": "http://geoservices.brgm.fr/risques",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "BRGM - Risques",
+            "url": "http://geoservices.brgm.fr/risques",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "BRGM - Obs. des Matériaux",
-        "url": "http://geoservices.brgm.fr/odmgm",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "BRGM - Obs. des Matériaux",
+            "url": "http://geoservices.brgm.fr/odmgm",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         }
     ],
     "wms_connections": [
         {
-        "name": "IGN - Essentiels",
-        "url" : "https://wxs.ign.fr/essentiels/geoportail/r/wms?",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "IGN - Essentiels",
+            "url" : "https://wxs.ign.fr/essentiels/geoportail/r/wms?",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "AEAP - Portail de bassin",
-        "url": "https://artois-picardie.eaufrance.fr/geoserver/TEST_IDG/wms?",
-        "domains": ["eauap"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "AEAP - Portail de bassin",
+            "url": "https://artois-picardie.eaufrance.fr/geoserver/TEST_IDG/wms?",
+            "domains": ["eauap"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "IGN - Géoplateforme - WMTS",
-        "url": "https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities",
-        "domains": ["all"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "IGN - Géoplateforme - WMTS",
+            "url": "https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities",
+            "domains": ["all"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "IGN - Géoplateforme - WMS Raster",
-        "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "IGN - Géoplateforme - WMS Raster",
+            "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "IGN - Géoplateforme - WMS Vecteur",
-        "url": "https://data.geopf.fr/wms-v/ows?service=wms&version=1.3.0&request=GetCapabilities",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "IGN - Géoplateforme - WMS Vecteur",
+            "url": "https://data.geopf.fr/wms-v/ows?service=wms&version=1.3.0&request=GetCapabilities",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "SANDRE",
-        "url": "https://services.sandre.eaufrance.fr/geo/sandre",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "SANDRE",
+            "url": "https://services.sandre.eaufrance.fr/geo/sandre",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "BRGM - Géologie",
-        "url": "http://geoservices.brgm.fr/geologie",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "BRGM - Géologie",
+            "url": "http://geoservices.brgm.fr/geologie",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "BRGM - Risques",
-        "url": "http://geoservices.brgm.fr/risques",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "BRGM - Risques",
+            "url": "http://geoservices.brgm.fr/risques",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "BRGM - Obs. des Matériaux",
-        "url": "http://geoservices.brgm.fr/odmgm",
-        "domains": ["all"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "BRGM - Obs. des Matériaux",
+            "url": "http://geoservices.brgm.fr/odmgm",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["all"]
         }
     ],
     "arcgis_connections": [
         {
-        "name": "AERM - GéoDonnées AERM",
-        "url": "https://geo.eau-rhin-meuse.fr/server/rest/services/GEORM",
-        "headers": [],
-        "community_endpoint": "",
-        "content_endpoint": "",
-        "authcfg": "",
-        "domains": ["aerm.fr"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "AERM - GéoDonnées AERM",
+            "url": "https://geo.eau-rhin-meuse.fr/server/rest/services/GEORM",
+            "headers": [],
+            "community_endpoint": "",
+            "content_endpoint": "",
+            "authcfg": "",
+            "domains": ["aerm.fr"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ],
     "composer_templates": [
         {
-        "path": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/11_presentation/113_mise_en_page_qgis",
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "path": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/11_presentation/113_mise_en_page_qgis",
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "path": "N:/Applis/SIG/_Commun_sig/QGis/modele_composeur",
-        "domains": ["domntade"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "path": "N:/Applis/SIG/_Commun_sig/QGis/modele_composeur",
+            "domains": ["domntade"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ],
     "svg_paths": [
         {
-        "path": "N:/Applis/SIG/_Commun_sig/QGis/svg",
-        "domains": ["domntade"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "path": "N:/Applis/SIG/_Commun_sig/QGis/svg",
+            "domains": ["domntade"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "path": "R:/Espace_Correspondants_SIG/Astuces_Outils/SVG_symboles",
-        "domains": ["dag"],
-        "users": [""],
-        "envs": ["all"]
+            "path": "R:/Espace_Correspondants_SIG/Astuces_Outils/SVG_symboles",
+            "domains": ["dag"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
             "path": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/15_symbologie/AEAG",
@@ -550,148 +550,148 @@
     ],
     "custom_env_vars": [
         {
-        "name": "QGIS_PLUGINPATH",
-        "value": "\\\\domntade.eaurmc.fr\\aermc\\applis\\SIG\\_Commun_sig\\QGis\\plugins_rmc",
-        "domains": ["domntade"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "QGIS_PLUGINPATH",
+            "value": "\\\\domntade.eaurmc.fr\\aermc\\applis\\SIG\\_Commun_sig\\QGis\\plugins_rmc",
+            "domains": ["domntade"],
+            "users": [""],
+            "envs": ["all"]
         },
         {
-        "name": "QGIS_PLUGINPATH",
-        "value": "\\\\NAS02\\groupe\\Refgeo\\Espace_Correspondants_SIG\\Astuces_Outils\\QGIS310_PLUGINS",
-        "domains": ["dag"],
-        "users": [""],
-        "envs": ["all"]
+            "name": "QGIS_PLUGINPATH",
+            "value": "\\\\NAS02\\groupe\\Refgeo\\Espace_Correspondants_SIG\\Astuces_Outils\\QGIS310_PLUGINS",
+            "domains": ["dag"],
+            "users": [""],
+            "envs": ["all"]
         }
     ],
     "color_schemes": [
         {
-        "name": "Etat écologique de surface",
-        "colors": [
-            {
-            "code": "#19d9cc",
-            "name": "Très bon état"
-            },
-            {
-            "code": "#66e680",
-            "name": "Bon état"
-            },
-            {
-            "code": "#ffe659",
-            "name": "Etat moyen"
-            },
-            {
-            "code": "#ff9900",
-            "name": "Etat médiocre"
-            },
-            {
-            "code": "#ff0000",
-            "name": "Mauvais état"
-            },
-            {
-            "code": "#b2b2b2",
-            "name": "Etat indéterminé"
-            }
-        ],
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "Etat écologique de surface",
+            "colors": [
+                {
+                    "code": "#19d9cc",
+                    "name": "Très bon état"
+                },
+                {
+                    "code": "#66e680",
+                    "name": "Bon état"
+                },
+                {
+                    "code": "#ffe659",
+                    "name": "Etat moyen"
+                },
+                {
+                    "code": "#ff9900",
+                    "name": "Etat médiocre"
+                },
+                {
+                    "code": "#ff0000",
+                    "name": "Mauvais état"
+                },
+                {
+                    "code": "#b2b2b2",
+                    "name": "Etat indéterminé"
+                }
+            ],
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "Etat chimique de surface",
-        "colors": [
-            {
-            "code": "#19d9cc",
-            "name": "Bon état"
-            },
-            {
-            "code": "#ff0000",
-            "name": "Mauvais état"
-            },
-            {
-            "code": "#b2b2b2",
-            "name": "Etat indéterminé"
-            }
-        ],
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "Etat chimique de surface",
+            "colors": [
+                {
+                    "code": "#19d9cc",
+                    "name": "Bon état"
+                },
+                {
+                    "code": "#ff0000",
+                    "name": "Mauvais état"
+                },
+                {
+                    "code": "#b2b2b2",
+                    "name": "Etat indéterminé"
+                }
+            ],
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "Etat chimique souterrain",
-        "colors": [
-            {
-            "code": "#66e680",
-            "name": "Bon état"
-            },
-            {
-            "code": "#ff0000",
-            "name": "Etat médiocre"
-            },
-            {
-            "code": "#b2b2b2",
-            "name": "Etat indéterminé"
-            }
-        ],
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "Etat chimique souterrain",
+            "colors": [
+                {
+                    "code": "#66e680",
+                    "name": "Bon état"
+                },
+                {
+                    "code": "#ff0000",
+                    "name": "Etat médiocre"
+                },
+                {
+                    "code": "#b2b2b2",
+                    "name": "Etat indéterminé"
+                }
+            ],
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "Niveau de confiance de l'état",
-        "colors": [
-            {
-            "code": "#8Bff4d",
-            "name": "Elevé"
-            },
-            {
-            "code": "#e7f2b3",
-            "name": "Moyen"
-            },
-            {
-            "code": "#ff80bf",
-            "name": "Faible"
-            },
-            {
-            "code": "#b2b2b2",
-            "name": "Pas d'information"
-            }
-        ],
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "Niveau de confiance de l'état",
+            "colors": [
+                {
+                    "code": "#8Bff4d",
+                    "name": "Elevé"
+                },
+                {
+                    "code": "#e7f2b3",
+                    "name": "Moyen"
+                },
+                {
+                    "code": "#ff80bf",
+                    "name": "Faible"
+                },
+                {
+                    "code": "#b2b2b2",
+                    "name": "Pas d'information"
+                }
+            ],
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         },
         {
-        "name": "Pression à l'origine du risque",
-        "colors": [
-            {
-            "code": "#4c0073",
-            "name": "Très forte"
-            },
-            {
-            "code": "#8400a8",
-            "name": "Forte"
-            },
-            {
-            "code": "#c500ff",
-            "name": "Moyenne"
-            },
-            {
-            "code": "#df73ff",
-            "name": "Faible"
-            },
-            {
-            "code": "#e8beff",
-            "name": "Très faible"
-            },
-            {
-            "code": "#c8c8c8",
-            "name": "Non qualifiée"
-            }
-        ],
-        "domains": ["aelb"],
-        "users": ["aubin_ni"],
-        "envs": ["all"]
+            "name": "Pression à l'origine du risque",
+            "colors": [
+                {
+                    "code": "#4c0073",
+                    "name": "Très forte"
+                },
+                {
+                    "code": "#8400a8",
+                    "name": "Forte"
+                },
+                {
+                    "code": "#c500ff",
+                    "name": "Moyenne"
+                },
+                {
+                    "code": "#df73ff",
+                    "name": "Faible"
+                },
+                {
+                    "code": "#e8beff",
+                    "name": "Très faible"
+                },
+                {
+                    "code": "#c8c8c8",
+                    "name": "Non qualifiée"
+                }
+            ],
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ]
 }
