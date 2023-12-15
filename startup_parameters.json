@@ -541,6 +541,12 @@
         "domains": ["dag"],
         "users": [""],
         "envs": ["all"]
+        },
+        {
+            "path": "W:/07-DONNEES_CONNAISSANCES/_ACCES_CARTO/1_aide_au_cartographe/15_symbologie/AEAG",
+            "domains": ["aelb"],
+            "users": ["aubin_ni"],
+            "envs": ["all"]
         }
     ],
     "custom_env_vars": [
