@@ -30,7 +30,9 @@
                 "names": [
                     "project_publisher",
                     "custom_catalog",
-                    "processing"
+                    "processing",
+                    "AdressesFr",
+                    "custom_news_feed"
                 ],
                 "domains": ["all"],
                 "users": [""],
