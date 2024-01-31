@@ -218,7 +218,7 @@
                 "envs": ["all"]
             },
             {
-                "plugin_name": "AdressesFr",
+                "plugin_name": "custom_news_feed",
                 "config": {
                     "config_path": "N:/Applis/SIG/_Commun_sig/QGis/news_qgis/sample_news.json"
                 },
