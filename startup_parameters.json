@@ -14,6 +14,12 @@
             "domains": ["aelb"],
             "users": [""],
             "envs": ["all"]
+        },
+        {
+            "drives": ["N:\\"],
+            "domains": ["domntade"],
+            "users": [""],
+            "envs": ["all"]
         }
     ],
     "plugins": {
@@ -210,6 +216,15 @@
                 "domains": ["aelb"],
                 "users": ["aubin_ni"],
                 "envs": ["all"]
+            },
+            {
+                "plugin_name": "AdressesFr",
+                "config": {
+                    "config_path": "N:/Applis/SIG/_Commun_sig/QGis/news_qgis/sample_news.json"
+                },
+                "domains": ["domntade"],
+                "users": ["aubin_ni"],
+                "envs": ["dev"]
             }
         ]
     },
@@ -282,6 +297,17 @@
                 "domains": ["all"],
                 "users": [],
                 "envs": ["all"]
+            },
+            {
+                "settings": [
+                    {
+                        "path": "qgis/projectTemplateDir",
+                        "value": "N:/Applis/SIG/_Commun_sig/QGis/modele_projet"
+                    }
+                ],
+                "domains": ["domntade"],
+                "users": ["aubin_ni"],
+                "envs": ["dev"]
             }
         ]
     },
