@@ -233,6 +233,9 @@ class StartupDSIUN:
                 if plugin_name == "creer_menus":
                     self.set_creer_menus_config(config.get("config", {}))
 
+                if plugin_name == "custom_news_feed":
+                    self.set_customnewsfeed_config(config.get("config", {}))
+
 
     def get_current_customcatalog_settings(self):
         s = QgsSettings()
@@ -923,6 +926,15 @@ class StartupDSIUN:
         if file_menus:
             s = QgsSettings()
             s.setValue("PluginCreerMenus/fileMenus", file_menus)
+
+    def set_customnewsfeed_config(self, config):
+        self.log("Paramétrage du plugin CustomNewsFeed", Qgis.Info)
+
+        config_path = config.get("config_path", "")
+
+        if config_path:
+            s = QgsSettings()
+            s.setValue("CustomNewsFeed/json_file_path", config_path)
 
     def set_default_crs(self):
         self.log("Paramétrage du système de projection par défaut", Qgis.Info)
