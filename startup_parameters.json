@@ -36,9 +36,7 @@
                 "names": [
                     "project_publisher",
                     "custom_catalog",
-                    "processing",
-                    "AdressesFr",
-                    "custom_news_feed"
+                    "processing"
                 ],
                 "domains": ["all"],
                 "users": [""],
@@ -78,7 +76,9 @@
                 "names": [
                     "gestionthemes",
                     "locouv",
-                    "rechpg"
+                    "rechpg",
+                    "AdressesFr",
+                    "custom_news_feed"
                 ],
                 "domains": ["domntade"],
                 "users": [""],
@@ -224,7 +224,7 @@
                 },
                 "domains": ["domntade"],
                 "users": ["aubin_ni"],
-                "envs": ["dev"]
+                "envs": ["all"]
             }
         ]
     },
@@ -307,7 +307,7 @@
                 ],
                 "domains": ["domntade"],
                 "users": ["aubin_ni"],
-                "envs": ["dev"]
+                "envs": ["all"]
             }
         ]
     },
