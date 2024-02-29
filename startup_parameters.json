@@ -39,7 +39,7 @@
                 ],
                 "domains": ["all"],
                 "users": [""],
-                "envs": ["dev"]
+                "envs": ["dev", "rec"]
             },
             {
                 "names": [
@@ -234,7 +234,7 @@
                 },
                 "domains": [],
                 "users": ["aubin_ni"],
-                "envs": ["dev"]
+                "envs": ["dev", "rec"]
             }
         ]
     },
@@ -258,7 +258,7 @@
             "scope": "api://a4d9f258-4148-4fca-9ebc-d4205e3ac637/User.Read",
             "domains": [],
             "users": ["aubin_ni"],
-            "envs": ["dev"]
+            "envs": ["dev", "rec"]
         },
         {
             "id": "aeap001",
