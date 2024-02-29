@@ -983,6 +983,7 @@ class StartupDSIUN:
         s.setValue("QWC2_Tools/authent_id", authent_id)
         s.setValue("QWC2_Tools/url_authent", url_authent)
         s.setValue("QWC2_Tools/url_publish", url_publish)
+        s.setValue("QWC2_Tools/type_authent", 2)
         
         if env == "dev":
             s.setValue("QWC2_Tools/debug_mode", True)
