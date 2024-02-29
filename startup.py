@@ -236,6 +236,9 @@ class StartupDSIUN:
                 if plugin_name == "custom_news_feed":
                     self.set_customnewsfeed_config(config.get("config", {}))
 
+                if plugin_name == "qwc2_tools":
+                    self.set_qwc2_tool_config(config.get("config", {}))
+
 
     def get_current_customcatalog_settings(self):
         s = QgsSettings()
@@ -935,6 +938,55 @@ class StartupDSIUN:
         if config_path:
             s = QgsSettings()
             s.setValue("CustomNewsFeed/json_file_path", config_path)
+
+    def set_qwc2_tool_config(self, config):
+        self.log("Paramétrage du plugin QWC2_Tools", Qgis.Info)
+
+        if not config:
+            self.log("Pas de paramètres pour le plugin QWC2_Tools", Qgis.Warning)
+            return
+
+        env = self.get_env()
+
+        if env == "dev":
+            subdomain = "geo-dev"
+        elif env == "rec":
+            subdomain = "geo-rec"
+        elif env == "prd":
+            subdomain = "geo"
+        else:
+            subdomain = "geo"
+
+        user_domain = os.environ.get("userdomain", "").lower()
+        user = os.environ.get("username", "").lower()
+
+        if user == "aubin.nicolas@aesn.fr":
+            tenant = "dsiun"
+        if user_domain == "dag":
+            tenant = "aeag"
+        elif user_domain == "eauap":
+            tenant = "aeap"
+        if user_domain == "aelb":
+            tenant = "aelb"
+        elif user_domain == "aerm.fr":
+            tenant = "aerm"
+        elif user_domain == "domntade":
+            tenant = "aermc"
+        elif user_domain == "aesn1":
+            tenant = "aesn"
+
+        authent_id = config.get("authent_id", "")
+        url_authent = config.get("url_authent", "").replace("$SUBDOMAIN$", subdomain)
+        url_publish = config.get("url_publish", "").replace("$SUBDOMAIN$", subdomain).replace("$TENANT$", tenant)
+
+        s = QgsSettings()
+        s.setValue("QWC2_Tools/authent_id", authent_id)
+        s.setValue("QWC2_Tools/url_authent", url_authent)
+        s.setValue("QWC2_Tools/url_publish", url_publish)
+        
+        if env == "dev":
+            s.setValue("QWC2_Tools/debug_mode", True)
+
 
     def set_default_crs(self):
         self.log("Paramétrage du système de projection par défaut", Qgis.Info)

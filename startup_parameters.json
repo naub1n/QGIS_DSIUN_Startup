@@ -224,6 +224,17 @@
                 "domains": ["domntade"],
                 "users": ["aubin_ni"],
                 "envs": ["all"]
+            },
+            {
+                "plugin_name": "qwc2_tools",
+                "config": {
+                    "authent_id": "dsiun02",
+                    "url_authent": "https://$SUBDOMAIN$.lesagencesdeleau.eu/auth/tokenlogin",
+                    "url_publish": "https://$SUBDOMAIN$.lesagencesdeleau.eu/$TENANT$/publish"
+                },
+                "domains": [],
+                "users": ["aubin_ni"],
+                "envs": ["dev"]
             }
         ]
     },
