@@ -326,6 +326,12 @@ class StartupDSIUN:
                 self.auth_conf_name = auth_config.get("name", "")
                 auth_user = auth_config.get("user", "")
                 auth_pass = auth_config.get("pass", "")
+                auth_type = auth_config.get("type", "")
+                auth_request_url = auth_config.get("request_url", "")
+                auth_token_url = auth_config.get("token_url", "")
+                auth_client_id = auth_config.get("client_id", "")
+                auth_client_secret = auth_config.get("client_secret", "")
+                auth_scope = auth_config.get("scope", "")
                 auth_domains = [x.lower() for x in auth_config.get("domains", [])]
                 auth_users = [x.lower() for x in auth_config.get("users", [])]
                 auth_envs = [x.lower() for x in auth_config.get("envs", [])]
@@ -337,8 +343,19 @@ class StartupDSIUN:
                     else:
                         self.log("Ajout de la configuration d'authentification %s" % str(self.auth_id), Qgis.Info)
 
-                        if auth_user and auth_pass:
-                            self.save_auth_config(self.auth_id, self.auth_conf_name, auth_user, auth_pass)
+                        if (auth_user and auth_pass) or auth_type == 'OAuth2':
+                            self.save_auth_config(
+                                auth_id=self.auth_id, 
+                                name=self.auth_conf_name, 
+                                user=auth_user, 
+                                password=auth_pass, 
+                                client_id=auth_client_id, 
+                                client_secret=auth_client_secret, 
+                                req_url=auth_request_url, 
+                                token_url=auth_token_url, 
+                                scope=auth_scope, 
+                                method=auth_type
+                            )
 
                             continue
 
@@ -388,13 +405,50 @@ class StartupDSIUN:
         self.save_auth_config(self.auth_id, self.auth_conf_name, self.qt_auth_login.text(), self.qt_auth_pass.text())
         self.qt_auth_dlg.accept()
 
-    def save_auth_config(self, auth_id, name, user, password):
+    def save_auth_config(self, auth_id, name, user=None, password=None, client_id=None, client_secret=None, req_url=None, token_url=None, scope=None, method="Basic"):
+
         config = QgsAuthMethodConfig()
         config.setId(auth_id)
         config.setName(name)
-        config.setConfig('username', user)
-        config.setConfig('password', password)
-        config.setMethod("Basic")
+
+        if method == 'Basic':
+            config.setConfig('username', user)
+            config.setConfig('password', password)
+            config.setMethod("Basic")
+        elif method == 'OAuth2':
+            oauth2_config = {
+                "accessMethod": 0,
+                "apiKey": "",
+                "clientId": client_id,
+                "clientSecret": client_secret,
+                "configType": 1,
+                "customHeader": "",
+                "description": "",
+                "grantFlow": 0,
+                "id": "",
+                "name": "",
+                "objectName": "",
+                "password": "",
+                "persistToken": False,
+                "queryPairs": {},
+                "redirectPort": 7070,
+                "redirectUrl": "",
+                "refreshTokenUrl": "",
+                "requestTimeout": 30,
+                "requestUrl": req_url,
+                "scope": scope,
+                "tokenUrl": token_url,
+                "username": "",
+                "version":1
+            }
+
+            config_map = {
+                'oauth2config': json.dumps(oauth2_config)
+            }
+
+            config.setMethod('OAuth2')
+            config.setConfigMap(config_map)
+
         assert config.isValid()
 
         self.auth_mgr.storeAuthenticationConfig(config)
