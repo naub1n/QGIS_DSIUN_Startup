@@ -242,7 +242,7 @@
         {
             "id": "dsiun01",
             "name": "Authentification Agences de l'eau",
-            "type": "basic",
+            "type": "Basic",
             "domains": ["all"],
             "users": ["aubin_ni"],
             "envs": ["all"]
@@ -250,6 +250,7 @@
         {
             "id": "dsiun02",
             "name": "Authentification pour QWC2",
+            "type": "OAuth2",
             "request_url": "https://login.microsoftonline.com/77e27c6b-739c-41db-87e0-01f293bc2f06/oauth2/v2.0/authorize",
             "token_url": "https://login.microsoftonline.com/77e27c6b-739c-41db-87e0-01f293bc2f06/oauth2/v2.0/token",
             "client_id": "a4d9f258-4148-4fca-9ebc-d4205e3ac637",
@@ -262,7 +263,7 @@
         {
             "id": "aeap001",
             "name": "AEAP - Consultation Ref. Geo.",
-            "type": "basic",
+            "type": "Basic",
             "user": "lecsig",
             "pass": "lecsig",
             "domains": ["eauap"],
@@ -272,7 +273,7 @@
         {
             "id": "aeap002",
             "name": "AEAP - Administration Ref. Geo.",
-            "type": "basic",
+            "type": "Basic",
             "user": "sig",
             "domains": ["eauap"],
             "users": ["aubin_ni"],
@@ -281,7 +282,7 @@
         {
             "id": "aermc01",
             "name": "AERMC - Consultation Ref. Geo.",
-            "type": "basic",
+            "type": "Basic",
             "user": "lecig",
             "pass": "leciglec",
             "domains": ["domntade"],
@@ -291,7 +292,7 @@
         {
             "id": "aelb001",
             "name": "AELB - Consultation GeoDiff",
-            "type": "basic",
+            "type": "Basic",
             "user": "bdgeo_diff_visus",
             "pass": "V1susPr0d",
             "domains": ["aelb"],
