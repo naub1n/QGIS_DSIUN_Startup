@@ -34,9 +34,8 @@
         "plugins_names": [
             {
                 "names": [
-                    "project_publisher",
-                    "custom_catalog",
-                    "processing"
+                    "processing",
+                    "qwc2_tools"
                 ],
                 "domains": ["all"],
                 "users": [""],
