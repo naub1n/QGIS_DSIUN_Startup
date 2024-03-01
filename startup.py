@@ -945,7 +945,7 @@ class StartupDSIUN:
         user_domain = os.environ.get("userdomain", "").lower()
         user = os.environ.get("username", "").lower()
 
-        if user == "aubin.nicolas@aesn.fr":
+        if user == "aubin_ni":
             tenant = "dsiun"
         if user_domain == "dag":
             tenant = "aeag"
