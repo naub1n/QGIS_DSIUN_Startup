@@ -78,32 +78,6 @@ class StartupDSIUN:
             self.log("Erreur lors de la lecture de la configuration globale: %s" % str(e), Qgis.Critical)
 
             return {}
-
-    # def read_conf(self, config):
-    #     self.log("Lecture de la configuration de l'environnement.", Qgis.Info)
-    #     if config == {}:
-    #         self.log("Erreur lors de la lecture de la configuration de l'environnement", Qgis.Critical)
-    #         return {}
-    #     else:
-    #         env_config = {}
-    #         current_profile = self.get_current_profile_name()
-    #         for key, environment in enumerate(config.get("environments", [])):
-    #             if environment.get("env_name", "") == "production":
-    #                 env_prod_key = key
-
-    #             if environment.get("profile_name", "") == current_profile:
-    #                 env_config = environment
-    #                 env_name = environment.get("env_name", "")
-
-    #         if not env_config:
-    #             self.log("profil '%s' inconnu, utilisation de la configuration de production" % current_profile,
-    #                      Qgis.Warning)
-    #             env_config = config.get("environments", [])[env_prod_key]
-    #         else:
-    #             self.log("Utilisation de la configuration '%s'" % env_name, Qgis.Info)
-
-    #         return env_config
-
     def start(self):
         if self.check_json() and self.global_config:
             profiles = self.global_config.get("profiles", [])
@@ -452,49 +426,6 @@ class StartupDSIUN:
         assert config.isValid()
 
         self.auth_mgr.storeAuthenticationConfig(config)
-
-    # def check_profiles(self):
-    #     self.log("Vérification des profiles ...", Qgis.Info)
-    #     try:
-    #         for env in self.global_config.get("environments", []):
-    #             profile = env.get("profile_name", "")
-    #             is_default_profile = env.get("profile_default", False)
-
-    #             qgis_profile_path = os.path.join(self.profiles_path, profile + '/QGIS')
-    #             config_profile_path = os.path.join(qgis_profile_path, 'QGIS3.ini').replace('\\', '/')
-
-    #             if not self.profile_exists(profile):
-    #                 self.log("Création du profile %s" % profile, Qgis.Info)
-    #                 if self.current_v >= self.qgis_min_version_profile:
-    #                     self.p_mgr.createUserProfile(profile)
-    #                 else:
-    #                     self.log("Utilisation de la méthode pour les versions inférieures à %s" %
-    #                              self.qgis_min_version_profile, Qgis.Info)
-    #                     # Création du dossier du profil et du fichier de configuration vide
-    #                     os.makedirs(qgis_profile_path, exist_ok=True)
-    #                     with open(config_profile_path, mode='w'):
-    #                         pass
-
-    #                 if is_default_profile:
-    #                     # Demande à l'utilisateur d'ouvrir le profile de la DSIUN
-    #                     msg_box = QtWidgets.QMessageBox()
-    #                     msg_box.setText("Le profile %s a été créé.\n" % profile +
-    #                                     "Souhaitez-vous basculer sur ce profil?")
-    #                     msg_box.setStandardButtons(QtWidgets.QMessageBox.No | QtWidgets.QMessageBox.Yes)
-    #                     open_new_profil = msg_box.exec()
-    #                     if open_new_profil == QtWidgets.QMessageBox.Yes:
-    #                         self.p_mgr.loadUserProfile(profile)
-    #                         # Ne fonctionne pas :
-    #                         os._exit(0)
-
-    #             # Vérification du profil par défaut
-    #             if is_default_profile:
-    #                 if not self.p_mgr.defaultProfileName == profile:
-    #                     self.set_default_profile(profile)
-
-    #         self.log("Vérification des profiles - OK", Qgis.Info)
-    #     except Exception as e:
-    #         self.log("Erreur lors de la vérification des profiles : %s" % str(e), Qgis.Critical)
 
     def check_profiles(self):
         self.log("Vérification des profiles ...", Qgis.Info)
