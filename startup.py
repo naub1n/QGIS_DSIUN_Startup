@@ -947,11 +947,11 @@ class StartupDSIUN:
 
         if user == "aubin_ni":
             tenant = "dsiun"
-        if user_domain == "dag":
+        elif user_domain == "dag":
             tenant = "aeag"
         elif user_domain == "eauap":
             tenant = "aeap"
-        if user_domain == "aelb":
+        elif user_domain == "aelb":
             tenant = "aelb"
         elif user_domain == "aerm.fr":
             tenant = "aerm"
@@ -959,6 +959,8 @@ class StartupDSIUN:
             tenant = "aermc"
         elif user_domain == "aesn1":
             tenant = "aesn"
+        else:
+            tenant = "default"
 
         authent_id = config.get("authent_id", "")
         url_authent = config.get("url_authent", "").replace("$SUBDOMAIN$", subdomain)
