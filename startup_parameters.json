@@ -342,6 +342,17 @@
     "db_connections": [
         {
             "qgis_provider": "postgres",
+            "name": "DSIUN - Référentiels externes",
+            "host": "geodata-ref-rec.lesagencesdeleau.eu",
+            "port": "5432",
+            "dbname": "ref_ext",
+            "auth_id": "dsiun01",
+            "domains": [""],
+            "users": ["aubin_ni"],
+            "envs": ["rec"]
+        },
+        {
+            "qgis_provider": "postgres",
             "name": "DSIUN - Travail",
             "host": "",
             "port": "5432",
