@@ -232,8 +232,8 @@
                     "url_authent": "https://$SUBDOMAIN$.lesagencesdeleau.eu/auth/tokenlogin",
                     "url_publish": "https://$SUBDOMAIN$.lesagencesdeleau.eu/$TENANT$/publish"
                 },
-                "domains": [],
-                "users": ["aubin_ni"],
+                "domains": ["all"],
+                "users": [],
                 "envs": ["dev", "rec"]
             }
         ]
@@ -256,8 +256,8 @@
             "client_id": "a4d9f258-4148-4fca-9ebc-d4205e3ac637",
             "client_secret": "~WJ8Q~F--ms5L8sRKO-rS8E3KS-PnBL71Vw1_dky",
             "scope": "api://a4d9f258-4148-4fca-9ebc-d4205e3ac637/User.Read",
-            "domains": [],
-            "users": ["aubin_ni"],
+            "domains": ["all"],
+            "users": [],
             "envs": ["dev", "rec"]
         },
         {
