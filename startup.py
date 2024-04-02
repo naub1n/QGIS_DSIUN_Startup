@@ -967,6 +967,11 @@ class StartupDSIUN:
         url_publish = config.get("url_publish", "").replace("$SUBDOMAIN$", subdomain).replace("$TENANT$", tenant)
 
         s = QgsSettings()
+
+        if s.value("QWC2_Tools/url_publish", ""):
+            self.log("Un paramètrage est déjà présent pour le plugin QWC2_Tools", Qgis.Info)
+            return
+
         s.setValue("QWC2_Tools/authent_id", authent_id)
         s.setValue("QWC2_Tools/url_authent", url_authent)
         s.setValue("QWC2_Tools/url_publish", url_publish)
