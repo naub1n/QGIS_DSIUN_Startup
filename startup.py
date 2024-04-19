@@ -306,12 +306,14 @@ class StartupDSIUN:
                 auth_client_id = auth_config.get("client_id", "")
                 auth_client_secret = auth_config.get("client_secret", "")
                 auth_scope = auth_config.get("scope", "")
+                auth_apikey = auth_config.get("apikey", "")
+                auth_force_refresh = auth_config.get("force_refresh", False)
                 auth_domains = [x.lower() for x in auth_config.get("domains", [])]
                 auth_users = [x.lower() for x in auth_config.get("users", [])]
                 auth_envs = [x.lower() for x in auth_config.get("envs", [])]
 
                 if self.check_envs(auth_envs) and self.check_users_and_domains(auth_users, auth_domains):
-                    if self.auth_id in ids:
+                    if self.auth_id in ids and not auth_force_refresh:
                         self.log("La configuration %s est déjà présente" % str(self.auth_id), Qgis.Info)
 
                     else:
@@ -328,6 +330,16 @@ class StartupDSIUN:
                                 req_url=auth_request_url, 
                                 token_url=auth_token_url, 
                                 scope=auth_scope, 
+                                method=auth_type
+                            )
+
+                            continue
+
+                        elif auth_type == 'APIHeader':
+                            self.save_auth_config(
+                                auth_id=self.auth_id, 
+                                name=self.auth_conf_name, 
+                                apikey=auth_apikey,
                                 method=auth_type
                             )
 
@@ -379,7 +391,7 @@ class StartupDSIUN:
         self.save_auth_config(self.auth_id, self.auth_conf_name, self.qt_auth_login.text(), self.qt_auth_pass.text())
         self.qt_auth_dlg.accept()
 
-    def save_auth_config(self, auth_id, name, user=None, password=None, client_id=None, client_secret=None, req_url=None, token_url=None, scope=None, method="Basic"):
+    def save_auth_config(self, auth_id, name, user=None, password=None, client_id=None, client_secret=None, req_url=None, token_url=None, scope=None, apikey=None, method="Basic"):
 
         config = QgsAuthMethodConfig()
         config.setId(auth_id)
@@ -422,10 +434,14 @@ class StartupDSIUN:
 
             config.setMethod('OAuth2')
             config.setConfigMap(config_map)
+        
+        elif method == 'APIHeader':
+            config.setConfig('apikey', apikey)
+            config.setMethod("APIHeader")
 
         assert config.isValid()
 
-        self.auth_mgr.storeAuthenticationConfig(config)
+        self.auth_mgr.storeAuthenticationConfig(config, overwrite=True)
 
     def check_profiles(self):
         self.log("Vérification des profiles ...", Qgis.Info)
