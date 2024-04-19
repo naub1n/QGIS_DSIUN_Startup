@@ -265,6 +265,7 @@
             "name": "Authentification pour les données non libres IGN",
             "type": "APIHeader",
             "apikey": "ign_scan_ws",
+            "force_refresh": true,
             "domains": ["all"],
             "users": [],
             "envs": ["dev"]
