@@ -256,6 +256,7 @@
             "client_id": "a4d9f258-4148-4fca-9ebc-d4205e3ac637",
             "client_secret": "~WJ8Q~F--ms5L8sRKO-rS8E3KS-PnBL71Vw1_dky",
             "scope": "api://a4d9f258-4148-4fca-9ebc-d4205e3ac637/User.Read",
+            "force_refresh": true,
             "domains": ["all"],
             "users": [],
             "envs": ["dev", "rec"]
