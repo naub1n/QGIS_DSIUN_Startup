@@ -269,7 +269,7 @@
             "force_refresh": true,
             "domains": ["all"],
             "users": [],
-            "envs": ["dev"]
+            "envs": ["all"]
         },
         {
             "id": "aeap001",
