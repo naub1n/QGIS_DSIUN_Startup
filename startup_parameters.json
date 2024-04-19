@@ -564,7 +564,7 @@
             "authcfg": "dsiun03",
             "domains": ["all"],
             "users": [""],
-            "envs": ["dev"]
+            "envs": ["all"]
         },
         {
             "name": "IGN - Géoplateforme - WMS Raster",
@@ -579,7 +579,7 @@
             "authcfg": "dsiun03",
             "domains": ["all"],
             "users": [""],
-            "envs": ["dev"]
+            "envs": ["all"]
         },
         {
             "name": "IGN - Géoplateforme - WMS Vecteur",
