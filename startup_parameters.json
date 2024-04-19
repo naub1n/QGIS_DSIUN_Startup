@@ -261,6 +261,15 @@
             "envs": ["dev", "rec"]
         },
         {
+            "id": "dsiun03",
+            "name": "Authentification pour les données non libres IGN",
+            "type": "APIHeader",
+            "apikey": "ign_scan_ws",
+            "domains": ["all"],
+            "users": [],
+            "envs": ["dev"]
+        },
+        {
             "id": "aeap001",
             "name": "AEAP - Consultation Ref. Geo.",
             "type": "Basic",
@@ -548,11 +557,27 @@
             "envs": ["all"]
         },
         {
+            "name": "IGN - Géoplateforme - WMTS non libre",
+            "url": "https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities",
+            "authcfg": "dsiun03",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["dev"]
+        },
+        {
             "name": "IGN - Géoplateforme - WMS Raster",
             "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
             "domains": ["all"],
             "users": [""],
             "envs": ["all"]
+        },
+        {
+            "name": "IGN - Géoplateforme - WMS Raster non libre",
+            "url": "https://data.geopf.fr/private/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+            "authcfg": "dsiun03",
+            "domains": ["all"],
+            "users": [""],
+            "envs": ["dev"]
         },
         {
             "name": "IGN - Géoplateforme - WMS Vecteur",
