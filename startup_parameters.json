@@ -331,6 +331,10 @@
                     {
                         "path" : "qgis/iconSize",
                         "value": 24
+                    },
+                    {
+                        "path" : "qgis/networkAndProxy/networkTimeout",
+                        "value": 240000
                     }
                 ],
                 "domains": ["all"],
