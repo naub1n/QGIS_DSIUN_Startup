@@ -164,7 +164,9 @@
                 "plugin_name": "menu_from_project",
                 "config": {
                     "options": {
-                        "optionSourceMD": "ogc"
+                        "optionSourceMD": "ogc",
+                        "optionLoadAll": true,
+                        "optionCreateGroup": true
                     },
                     "replace_projects": false,
                     "projects": [
