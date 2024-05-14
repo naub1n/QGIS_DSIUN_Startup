@@ -386,6 +386,9 @@
             "port": "5432",
             "dbname": "cyclope",
             "auth_id": "dsiun01",
+            "configs": {
+                "allowGeometrylessTables": true
+            },
             "domains": [],
             "users": ["aubin_ni", "bassiefr"],
             "envs": ["dev"]
