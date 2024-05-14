@@ -79,7 +79,8 @@ class StartupDSIUN:
 
             return {}
     def start(self):
-        if self.check_json() and self.global_config:
+        #if self.check_json() and self.global_config: #suppression check_json car le module jsonschema n'est pas présent d'origine et pose problème.
+        if self.global_config:
             profiles = self.global_config.get("profiles", [])
 
             if self.check_version():
