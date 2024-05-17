@@ -267,6 +267,16 @@
             "id": "dsiun03",
             "name": "Authentification pour les données non libres IGN",
             "type": "APIHeader",
+            "apikey": "uXVDFrxRTO7BrCjD5TOA5HTpNLc9Z17E",
+            "force_refresh": true,
+            "domains": ["all"],
+            "users": [],
+            "envs": ["all"]
+        },
+        {
+            "id": "dsiun04",
+            "name": "Authentification pour les données non libres IGN (secours)",
+            "type": "APIHeader",
             "apikey": "ign_scan_ws",
             "force_refresh": true,
             "domains": ["all"],
