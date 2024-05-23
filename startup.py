@@ -854,7 +854,11 @@ class StartupDSIUN:
     def check_users_and_domains(self, users=[], domains=[]):
         user = os.environ.get("username", "").lower()
         domain = os.environ.get("userdomain", "").lower()
-        if domain in domains or "all" in domains or user in users:
+
+        users_lower = [x.lower() for x in users]
+        domains_lower = [x.lower() for x in domains]
+
+        if domain in domains_lower or "all" in domains_lower or user in users_lower:
             return True
         else:
             return False
