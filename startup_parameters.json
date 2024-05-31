@@ -39,7 +39,7 @@
                 ],
                 "domains": ["all"],
                 "users": [""],
-                "envs": ["dev", "rec"]
+                "envs": ["all"]
             },
             {
                 "names": [
