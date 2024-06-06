@@ -21,7 +21,8 @@ class StartupDSIUN:
     def __init__(self):
 
         #### Variables à paramétrer ####
-        self.conf_url = "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters.json"
+        #self.conf_url = "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters.json"
+        self.conf_url = "https://geoapi.lesagencesdeleau.eu/api/qgis/config"
         self.default_profile_message = "Vous utilisez le profil par défaut. Privilégiez le profil DSIUN."
         self.qgis_bad_version_message = "Vous utilisez une version (%s) non gérée par la DSIUN (%s). Le paramètrage ne sera pas appliqué."
 
