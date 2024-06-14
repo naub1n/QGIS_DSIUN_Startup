@@ -21,7 +21,6 @@ class StartupDSIUN:
     def __init__(self):
 
         #### Variables à paramétrer ####
-        #self.conf_url = "https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters.json"
         self.conf_url = "https://geoapi.lesagencesdeleau.eu/api/qgis/config"
         self.default_profile_message = "Vous utilisez le profil par défaut. Privilégiez le profil DSIUN."
         self.qgis_bad_version_message = "Vous utilisez une version (%s) non gérée par la DSIUN (%s). Le paramètrage ne sera pas appliqué."
@@ -492,8 +491,8 @@ class StartupDSIUN:
 
     def check_version(self):
         self.log("Vérification de la version de QGIS ...", Qgis.Info)
-        qgis_version_dsiun = self.global_config.get("qgis", {}).get("dsiun_version", "")
-        if self.current_v == qgis_version_dsiun:
+        qgis_version_dsiun = self.global_config.get("qgis", {}).get("dsiun_versions", [])
+        if self.current_v in qgis_version_dsiun:
             return True
         else:
             iface.messageBar().pushMessage(self.qgis_bad_version_message % (self.current_v, qgis_version_dsiun),
@@ -797,7 +796,7 @@ class StartupDSIUN:
             return True
 
         schema_conf_url = self.global_config.get('$schema',
-                                                 'https://raw.githubusercontent.com/naub1n/QGIS_DSIUN_Startup/master/startup_parameters_schema.json')
+                                                 'https://geoapi.lesagencesdeleau.eu/api/qgis/config_schema')
 
         try:
             r = requests.get(schema_conf_url,
